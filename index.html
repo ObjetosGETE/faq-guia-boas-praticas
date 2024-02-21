@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOP UC6 - Quiz</title>
+    <title>Curadoria – Guia de boas práticas para o uso de tecnologias digitais</title>
 
     <!-- Trocar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +15,13 @@
 </head>
 <body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
     <div id='sncloader' class='over-loader'><div class="over-cell"><div id="sncload"></div></div></div>
-    <header id="topo" class="senac no-print position-relative">
+    <!-- <header id="topo" class="senac no-print position-relative">
         <div class="header-tecnicos container">
-        	  <h1 id="nome-curso">Técnico em Óptica</h1>
+        	  <h1 id="nome-curso">Quiz: Teste seus conhecimentos</h1>
             <div id="logo-senac"><img src="img/logo-senac.png" alt="logo do senac"></div>
         </div>
         <div id="sombra"></div>
-    </header>
+    </header> -->
 
     <div id="top-quiz">
         <div id="top-slides">
@@ -42,9 +42,37 @@
             <button class="bto-nav" type="button">Avançar</button>
         </nav>
     </div>
+    <div id="bottom-quiz" class="w-100">
+        <a href="arquivo.pdf" target="_blank" class="bto-baixar">
+           
+        </a>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="intro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title m-0" id="staticBackdropLabel">Introdução</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Olá, professor! Está com dúvidas sobre qual ferramenta da Microsoft utilizar em suas aulas? No guia de boas práticas, você foi apresentado a várias ferramentas da Microsoft. Neste jogo, você será direcionado à melhor opção de recurso para o que deseja realizar, seja para ação docente, colaboração ou aula criativa. </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/perguntas.js"></script>
     <script src="js/quiz.js"></script>
+    <script>
+        $(function(){
+            $("#intro").modal("show")
+        })
+    </script>
 </body>
 </html>

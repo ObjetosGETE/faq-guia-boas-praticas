@@ -26,15 +26,22 @@ body {
 p, button {
   font-family: var(--font-textos);
   font-size: 1em;
-  color: var(--cor-textos);
+  color: #041f37;
+}
+.modal-body p {
+  font-size: 0.8em
 }
 h2 {
   font-family: var(--font-titulo);
-  color: var(--cor-titulo);
-  font-size: 1em;
+  color: #F770D7;
+  font-size: 0.8em;
   text-transform: uppercase;
-  text-shadow: 2px 2px 0px #000000a6;
+  text-shadow: unset;
   margin-top: 50px;
+}
+#bottom-quiz img {
+  max-width: 13.1%;
+  margin-right: 4%;
 }
 .top-slide {
   max-width: 924px;
@@ -72,11 +79,12 @@ h2 {
 .pergunta {
   width: 100%;
   height: auto;
-  background-color: var(--paletta-amarelo-base);
-  border: 2px solid;
-  border-color: var(--paletta-azul-base);
+  background-color: #F770D7;
+  border: unset;
+  border-color: unset;
   padding: 20px;
-  box-shadow: 3px 3px 0px var(--cor-textos);
+  box-shadow: unset;
+  border-radius: 15px;
 }
 .pergunta p {
   max-width: 670px;
@@ -86,30 +94,35 @@ h2 {
   margin: auto;
 }
 .bto, .bto.desativar, .bto.desativar:hover {
-  background: none;
+  background-color: #8065e6;
   border: 0px none;
-  color: var(--cor-textos);
+  color: #fff;
   margin-bottom: 10px;
   width: 100%;
   text-align: left;
+  border-radius: 19px;
+  overflow: hidden;
+  padding: 6px;
 }
 .bto::before, .bto:hover.desativar::before {
-  content:attr(data-label);
+  content: attr(data-label);
   width: 54px;
   height: 55px;
   text-align: center;
   display: inline-block;
-  border: 2px solid var(--cor-textos);
-  background-color: var(--paletta-amarelo-base);
-  padding: 4px;
+  background-color: #522FD3;
+  padding: 6px 0px;
   margin-right: 10px;
-  box-shadow: 3px 3px 0px var(--cor-textos);
+  border-radius: 14px;
+  color: white
 }
 .bto:hover {
-  color: var(--paletta-azul-hover);
+  color: #fff;
+  background-color: #8065e6a6;
 }
 .bto:hover::before {
-  background-color: var(--paletta-amarelo-hover);
+  background-color: #fff;
+  color: #522FD3
 }
 .bto.positivo::before, .bto.positivo:hover::before {
   background-color: var(--feedback-positivo);
@@ -122,6 +135,20 @@ h2 {
 }
 .bto.negativo, .bto.negativo::before {
   color: var(--cor-textos);
+}
+.bto.negativo, .bto.negativo:hover {
+  background-color: #f9c3c3;
+  color: var(--cor-textos);
+}
+.bto.negativo::before {
+  color: var(--cor-textos) !important;
+}
+.bto.positivo, .bto.positivo:hover {
+  background-color: #c9ecba;
+  color: var(--cor-textos);
+}
+.bto.positivo::before {
+  color: var(--cor-textos) !important;
 }
 .respostas {
   max-width: 750px;
@@ -187,8 +214,49 @@ header.senac {
     position: relative;
     float: right;
     right: 2.7em;
-    top: 1em;
+    top: 0.7em;
   }
+  #bottom-quiz {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    padding-right: 40px;
+    text-align: right;
+  }
+  .bto-baixar {
+    max-width: 241px;
+    width: 100%;
+    height: auto;
+    transition: .25s;
+    display: inline-block;
+    transform-origin: center center;
+    background: url(../img/bto-download.png) top left / 100% auto no-repeat;
+    margin-right: 2%;
+    margin-top: -22px;
+  }
+  .pergunta a {
+    display: block;
+    color: white;
+    font-size: 18px; 
+    text-transform: uppercase;
+  }
+  .pergunta a:hover {
+    display: block;
+    text-decoration: none
+ 
+  }
+.bto-baixar:hover {
+  transform: scale(0.95);
+  transition: 0.25s;
+}
+
+.bto-baixar::before {
+  content: "";
+  width: 100%;
+  height: auto;
+  padding-top: 118.2%;
+  display: block;
+}
   @media screen and (max-width: 800px) {
     .container {
       max-width: 96%;
@@ -199,12 +267,12 @@ header.senac {
   margin-bottom: 10px;
 }
 #top-quiz {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-top: 30px;
-  }
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 7%;
+}
   @media screen and (max-width:1000px){
     #nome-curso.titulo-longo{
     width:70%;
@@ -252,7 +320,3 @@ header.senac {
   text-align: center;
   vertical-align:middle;
 }
-
-
-
-  

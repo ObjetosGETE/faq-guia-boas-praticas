@@ -17,7 +17,7 @@
 
   /* Imagens para trocar caso haja necessidade*/
   body {
-    background-image: url(../img/bg-desk.png);
+    background-image: url(../img/bg-desk.jpg);
   }
 
   .thumbs-up {
@@ -32,11 +32,36 @@
   }
 
 /* Background para versão mobile */
+@media only screen and (max-width: 1500px){
+  #bottom-quiz {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+    padding-right: unset !important;
+    text-align: center !important
+  }
+  .bto-baixar {
+    margin-right: unset !important;
+   }
+}
   @media only screen and (max-width: 991px){
     body {
-      background: url(../img/bg-mobile.png) top center / cover fixed no-repeat #333;
+      background: url(../img/bg-mobile.jpg) top center / cover fixed no-repeat #333;
       font-size: 26px;
     }
+    
+    .bto, .bto.desativar, .bto.desativar:hover {
+      align-items: stretch;
+      display: flex;
+      flex-direction: row;
+    }
+    .bto::before, .bto:hover.desativar::before {
+      height: unset !important;
+      /* padding: 4.4% 0px !important; */
+      flex: 0 0 54px;
+      align-items: center;
+    }
+    
   }
 
 /* Preloader */
